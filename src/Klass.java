@@ -3,12 +3,15 @@ import java.util.Scanner;
 
 public class Klass {
     ArrayList<Elever> Klassen = new ArrayList<Elever>();
+    static int antalElever;
 
     public void läggTillElev(Elever elev) {
         Klassen.add(elev);
     }
 
     public void visaKlass() {
+        antalElever = Klassen.size();
+        System.out.println("\nDet finns:"+antalElever+" elever i klassen");
         for (int i = 0; i < Klassen.size(); i++) {
             Elever elev = Klassen.get(i);
             System.out.println();
